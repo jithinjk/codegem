@@ -9,15 +9,33 @@
             name: 'Dodecahedron',
             price: 2.95,
             description: 'Dodecahedron',
-            canPurchase: true,
-            soldOut: false
+            canPurchase: false,
+            soldOut: false,
+            images: [{
+                    full: 'images/dodeca-01-full.jpg',
+                    thumb: 'images/dodeca-01-thumb.jpg'
+                },
+                {
+                    full: 'images/dodeca-02-full.jpg',
+                    thumb: 'images/dodeca-02-thumb.jpg'
+                }
+            ]
         },
         {
             name: 'Pentagonal Gem',
             price: 5.95,
             description: 'Pentagonal Gem',
-            canPurchase: true,
-            soldOut: false
+            canPurchase: false,
+            soldOut: false,
+            images: [{
+                    full: 'images/penta-01-full.jpg',
+                    thumb: 'images/penta-01-thumb.jpg'
+                },
+                {
+                    full: 'images/penta-02-full.jpg',
+                    thumb: 'images/penta-02-thumb.jpg'
+                }
+            ]
         }
     ];
 })();

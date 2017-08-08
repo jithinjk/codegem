@@ -8,14 +8,18 @@
 </head>
 
 <body ng-controller="StoreController as store">
-    <div ng-repeat="product in store.products">
-        <div ng-hide="product.soldOut">
-            <h1> Product Name {{product.name}} </h1>
-            <h2> Product Price ${{product.price}} </h2>
-            <p> Product Description {{product.description}} </p>
-            <button ng-show="product.canPurchase"> Add to Cart </button>
-        </div>
-    </div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="product in store.products | orderBy:'-price'">
+            <h3 ng-hide="product.soldOut">
+                {{product.name | uppercase}}
+                <em class="pull-right"> {{product.price | currency}} </em>
+                {{product.description | limitTo:6}}
+                <button ng-show="product.canPurchase"> Add to Cart </button>
+                <!-- {{date | date:'MM/dd/yyyy @ h:mma'}} -->
+                <img ng-src="{{product.images[0].full}}" alt="{{product.name}}">
+            </h3>
+        </li>
+    </ul>
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
 </body>
